@@ -1,7 +1,7 @@
 # How to load images for Segmentation and Classification?
 
-### Directory Layout
-## Segmentation Folder Structure
+## Directory Layout
+### Segmentation Folder Structure
 
 ```bash
 ├── train_folder
@@ -29,7 +29,8 @@ OR
 |   |   ├── mask
 
 ```
-## Classifcation Folder Structure 
+### Classifcation Folder Structure 
+```
 ├── train_folder
 │   ├── monkey
 │   │    ├── 1.tif
