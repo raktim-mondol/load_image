@@ -3,7 +3,7 @@
 #### Required Libraries 
 pip install os\
 pip install cv2\
-pip install numpy\ 
+pip install numpy 
 pip install tqdm\
 pip install scikit-image\
 pip install keras\ 
