@@ -1,2 +1,2 @@
-# load_image
-Load image for classification and segmentation
+# How to load images for Segmentation and Classification?
+
