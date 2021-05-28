@@ -43,7 +43,7 @@ OR
 │   │    ├── 1.tif
 │   │    ├── 2.tif
 │   │    ├── 3.tif
-
+```
 
 ### Data Load for Segmentation
 ```python
