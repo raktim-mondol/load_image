@@ -5,7 +5,7 @@
 
 ```bash
 ├── train_folder
-│   ├── data/
+│   ├── data_folder
 │   │   ├── image
 │   │    ├── 1.tif
 │   │    ├── 2.tif
