@@ -94,9 +94,9 @@ class Data():
             self.label_name.append(id_)
             self.label_title.append(n)
             for image_file in next(os.walk(path+'/'))[2]:
-                #if there is no .(dot) in the image name put 1
-                #if there is 1 .(dot) in the image name put 2
-                if (image_file.split('.')[2] == file_types):
+                #if there is only one .(dot) (which is before file_types) in the image then put [1]
+                #if there is One(1) extra .(dot) in the image (excluding dot(.) before file_types) then put [2]
+                if (image_file.split('.')[1] == file_types):
                     image_ = cv2.imread((path +'/'+image_file), cv2.IMREAD_COLOR)
                     if (img_h > image_.shape[0]):
                         interpolation = cv2.INTER_CUBIC
@@ -148,15 +148,4 @@ class Data():
             image_ = random.randint(0, image_count-1)
             imshow(image[image_])
             plt.show()
-            
-
-
-        
-
-            
-        
-        
-        
-
-        
-        
+   
