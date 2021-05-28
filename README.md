@@ -1,5 +1,14 @@
 # How to load images for Segmentation and Classification?
 
+#### Required Libraries 
+pip install os
+pip install cv2
+pip install numpy 
+pip install tqdm
+pip install scikit-image
+pip install keras 
+pip install matplotlib
+
 ## Directory Layout
 ### Segmentation Folder Structure
 
