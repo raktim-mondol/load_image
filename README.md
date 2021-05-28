@@ -62,6 +62,9 @@ from data_class import Data
 IMAGE_PATH = 'C:/Users/example/train_folder/'
 
 data_obj= Data()
+# You can provide your desired image size
+# You can upscale or downscale
+
 X_train, Y_train = data_obj.load_segmentation_data(IMAGE_PATH, 'tif', 256, 256)
 
 # Visualize image with corresponding mask
@@ -76,8 +79,11 @@ from data_class import Data
 IMAGE_PATH = 'C:/Users/example/train_folder/'
 
 data_obj= Data()
-X_train, Y_train = data_obj.load_classification_data(IMAGE_PATH, 'tif', 256, 256, to_cat=True)
+# You can provide your desired image size
+# You can upscale or downscale
 # to_catagorical=True will return one hot encoded value to Y_train
+X_train, Y_train = data_obj.load_classification_data(IMAGE_PATH, 'tif', 256, 256, to_cat=True)
+
 
 #Check Data Label
 data_obj.label_check()
