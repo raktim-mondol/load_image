@@ -135,7 +135,12 @@ class Data():
         #image with mask for segmentation 
         if (mask != 'None'):
             image_count_= int(image_count/2)
-            #divided by half because whole folder contain same ammount of image and mask
+            #divided by half because folder contain both images and masks
+            #but we only need no. of images in any folder
+            #so divided by two
+            
+            #this image_count(value) set as a limit for random number generator
+            #which further used for random data visualization
             image_ = random.randint(0, image_count_-1)
             imshow(image[image_])
             plt.title('Actual Image')
