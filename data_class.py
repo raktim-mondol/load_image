@@ -9,14 +9,6 @@ Created on Thu May 27 20:20:47 2021
 #ONE is IMAGE folder and another one MASK folder
 #This same structure has to be for both train and test image
 
-#train_path
-########### Image
-########### Mask
-
-#test_path
-########## Image
-########## Mask
-
 import os
 import cv2
 import random
