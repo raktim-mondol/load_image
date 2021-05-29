@@ -128,12 +128,13 @@ class Data():
         for n, id_ in enumerate(self.label_name):
             print(str(self.label_title[n]) + ' ------>>>> ' + str(self.label_name[n]+"\n"))
             
-    def visualize(self,image,mask='None'):
+    
+    def visualize(self,image, mask_, mask=False):
         #to count the image 
         image_count = sum(len(files) for _, _, files in os.walk(self.img_path))
         
         #image with mask for segmentation 
-        if (mask != 'None'):
+        if (mask == True):
             image_count_= int(image_count/2)
             #divided by half because folder contain both images and masks
             #but we only need no. of images in any folder
@@ -145,7 +146,7 @@ class Data():
             imshow(image[image_])
             plt.title('Actual Image')
             plt.show()
-            imshow(mask[image_],cmap='gray')
+            imshow(mask_[image_],cmap='gray')
             plt.title('Corresponding Mask')
             plt.show()
         #only image for classification
@@ -153,4 +154,5 @@ class Data():
             image_ = random.randint(0, image_count-1)
             imshow(image[image_])
             plt.show()
-   
+            
+    
