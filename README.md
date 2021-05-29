@@ -19,7 +19,7 @@ pip install matplotlib
 │   │    ├── 1.tif
 │   │    ├── 2.tif
 │   │    ├── 3.tif
-|   |   ├── mask
+│   │   ├── mask
 │   │    ├── 1.tif
 │   │    ├── 2.tif
 │   │    ├── 3.tif
@@ -27,15 +27,24 @@ pip install matplotlib
 OR
 
 ├── train_folder
-│   ├── sample1
+│   ├──sample1
 │   │   ├── image
-|   |   ├── mask
+│   │    ├── 1.tif
+│   │    ├── 2.tif
+│   │    ├── 3.tif
+│   │   ├── mask
+│   │    ├── 1.tif
+│   │    ├── 2.tif
+│   │    ├── 3.tif
 │   ├── sample2
 │   │   ├── image
-|   |   ├── mask
-│   ├── sample3
-│   │   ├── image
-|   |   ├── mask
+│   │    ├── 1.tif
+│   │    ├── 2.tif
+│   │    ├── 3.tif
+│   │   ├── mask
+│   │    ├── 1.tif
+│   │    ├── 2.tif
+│   │    ├── 3.tif
 
 ```
 ### Classifcation Folder Structure 
