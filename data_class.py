@@ -90,10 +90,10 @@ class Data():
         
         print('Importing Images and Assigning Labels')
         for n, id_ in tqdm(enumerate(ids)):
-            path = img_path + id_
+            path = img_path + id_ + '/'
             self.label_name.append(id_)
             self.label_title.append(n)
-            for image_file in next(os.walk(path+'/'))[2]:
+            for image_file in next(os.walk(path))[2]:
                 #if there is only one .(dot) (which is before file_types) in the image then put [1]
                 #if there is One(1) extra .(dot) in the image (excluding dot(.) before file_types) then put [2]
                 if (image_file.split('.')[1] == file_types):
