@@ -1,8 +1,9 @@
 # How to load images for Segmentation and Classification?
 
 #### Install Required Libraries 
+pip install --upgrade pip
 pip install os\
-pip install cv2\
+pip install cv2==4.5.1\
 pip install numpy\
 pip install tqdm\
 pip install scikit-image\
