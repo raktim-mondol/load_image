@@ -129,7 +129,7 @@ class Data():
             print(str(self.label_title[n]) + ' ------>>>> ' + str(self.label_name[n]+"\n"))
             
     
-    def visualize(self,image, mask_, mask=False):
+    def visualize(self,image, mask_=None, mask=False):
         #to count the image 
         image_count = sum(len(files) for _, _, files in os.walk(self.img_path))
         
