@@ -134,7 +134,7 @@ class Data():
         image_count = sum(len(files) for _, _, files in os.walk(self.img_path))
         
         #image with mask for segmentation 
-        if mask in not None:
+        if mask is not None:
             image_count_= int(image_count/2)
             #divided by half because folder contain both images and masks
             #but we only need no. of images in any folder
