@@ -33,8 +33,6 @@ class Data():
         ids = next(os.walk(img_path))[1]
         image=[]
         mask=[]
-        i=0
-        j=0
         
         print('Importing + Resizing Images  Masks')
         for id_ in tqdm(ids):
@@ -55,8 +53,8 @@ class Data():
                     image_ = cv2.cvtColor(image_,cv2.COLOR_BGR2RGB)
                     image_= cv2.resize(image_, (img_h, img_w), interpolation = interpolation)
                     #image[i] = img_as_float(image_)
-                    image.append(img_as_float(image_))
-                    i=i+1
+                    image.append(image_)
+
                     
             for mask_file in next(os.walk(path + '/mask/'))[2]:
                 if (mask_file.split('.')[1] == file_types):
@@ -73,9 +71,11 @@ class Data():
                     mask_ = cv2.resize(mask_, (img_h, img_w), interpolation = interpolation)
                     mask_ = np.expand_dims(mask_, axis=-1)
                     mask.append(mask_)
-                    j=j+1
-        image = np.array(image, dtype=np.float32)
-        mask = np.array(mask, dtype=np.uint8)
+
+                    
+        image = (np.array(image, dtype=np.uint8)/255.).astype(np.float32)
+        mask_ = np.array(mask, dtype=np.uint8)/255.
+        mask = (mask_ > 0.2).astype(np.uint8)
         return image, mask
     
     def load_classification_data(self, img_path, file_types, img_h, img_w, to_cat=True):
@@ -86,17 +86,21 @@ class Data():
         self.label_name = []
         self.label_title = []
         
+        #img_path='C:/D_DRIVE/UNSW/Experiment/Transfer_Learning/Dataset/Cats_and_Dogs/train/'
+        
         ids = next(os.walk(img_path))[1]
         
         print('Importing Images and Assigning Labels')
         for n, id_ in tqdm(enumerate(ids)):
-            path = img_path + id_ + '/'
+            path = img_path + id_
             self.label_name.append(id_)
             self.label_title.append(n)
-            for image_file in next(os.walk(path))[2]:
-                #if there is only one .(dot) (which is before file_types) in the image then put [1]
-                #if there is One(1) extra .(dot) in the image (excluding dot(.) before file_types) then put [2]
+            for image_file in next(os.walk(path+'/'))[2]:
+                
                 if (image_file.split('.')[1] == file_types):
+                    #ABOUT image_file.split('.')[1]
+                    #if there is only one .(dot) (which is before file_types) in the image then put [1]
+                    #if there is One(1) extra .(dot) in the image (excluding dot(.) before file_types) then put [2]
                     image_ = cv2.imread((path +'/'+image_file), cv2.IMREAD_COLOR)
                     if (img_h > image_.shape[0]):
                         interpolation = cv2.INTER_CUBIC
@@ -109,15 +113,16 @@ class Data():
                         #downscale image
                     image_ = cv2.cvtColor(image_,cv2.COLOR_BGR2RGB)
                     image_ = cv2.resize(image_, (img_h, img_w), interpolation = interpolation)
-                    dataset.append(img_as_float(image_))
+                    dataset.append(image_)
                     label.append(n)
-                    
-        data = np.array(dataset, dtype=np.float32)
+        
+        data = (np.array(dataset, dtype=np.uint8)/255.).astype(np.float32)
         
         if (to_cat == True):
             label=to_categorical(np.array(label, dtype=np.uint8))
         else:
             label = np.array(label, dtype=np.uint8)
+            
         return data, label
     
     
