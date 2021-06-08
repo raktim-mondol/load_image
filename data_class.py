@@ -45,11 +45,12 @@ class Data():
                         interpolation=cv2.INTER_CUBIC
                         #upscale image
                     elif (img_h==image_.shape[0]):
-                        interpolation=None
+                        interpolation=cv2.INTER_LINEAR
                         #no change in size
                     else:
                         interpolation=cv2.INTER_AREA
                         #downscale image
+                        #cv2.INTER_NEAREST   also good 
                     image_ = cv2.cvtColor(image_,cv2.COLOR_BGR2RGB)
                     image_= cv2.resize(image_, (img_h, img_w), interpolation = interpolation)
                     #image[i] = img_as_float(image_)
@@ -63,11 +64,12 @@ class Data():
                         interpolation=cv2.INTER_CUBIC
                         #upscale image
                     elif (img_h==mask_.shape[0]):
-                        interpolation=None
+                        interpolation=cv2.INTER_LINEAR
                         #no change in image
                     else:
                         interpolation=cv2.INTER_AREA
                         #downscale image
+                        #cv2.INTER_NEAREST   also good 
                     mask_ = cv2.resize(mask_, (img_h, img_w), interpolation = interpolation)
                     mask_ = np.expand_dims(mask_, axis=-1)
                     mask.append(mask_)
@@ -106,11 +108,12 @@ class Data():
                         interpolation = cv2.INTER_CUBIC
                         #upscale image
                     elif (img_h==image_.shape[0]):
-                        interpolation = None
+                        interpolation = cv2.INTER_LINEAR
                         #no change in size
                     else:
                         interpolation = cv2.INTER_AREA
                         #downscale image
+                        #cv2.INTER_NEAREST   also good 
                     image_ = cv2.cvtColor(image_,cv2.COLOR_BGR2RGB)
                     image_ = cv2.resize(image_, (img_h, img_w), interpolation = interpolation)
                     dataset.append(image_)
