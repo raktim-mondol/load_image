@@ -73,8 +73,10 @@ class Data():
                     mask_ = cv2.resize(mask_, (img_w, img_h), interpolation = interpolation)
                     mask_ = np.expand_dims(mask_, axis=-1)
                     mask.append(mask_)
-
-                    
+        #following line return image value between 0-255
+        #image = np.array(image, dtype=np.float32)
+        
+        #following line return image value between 0-1
         image = (np.array(image, dtype=np.uint8)/255.).astype(np.float32)
         mask_ = np.array(mask, dtype=np.uint8)/255.
         mask = (mask_ > 0.2).astype(np.uint8)
@@ -118,7 +120,10 @@ class Data():
                     image_ = cv2.resize(image_, (img_w, img_h), interpolation = interpolation)
                     dataset.append(image_)
                     label.append(n)
+        #following line return image value between 0-255
+        #data = np.array(dataset, dtype=np.float32)
         
+        #following line return image value between 0-1
         data = (np.array(dataset, dtype=np.uint8)/255.).astype(np.float32)
         
         if (to_cat == True):
