@@ -1,6 +1,6 @@
 # How to load images for Segmentation and Classification?
-```diff```
-- text in red
+```diff
+- text in red```
 
 
 #### Install Required Libraries 
