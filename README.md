@@ -1,4 +1,8 @@
 # How to load images for Segmentation and Classification?
+```html
+   // #c5f015
+```
+
 
 #### Install Required Libraries 
 pip install --upgrade pip\
