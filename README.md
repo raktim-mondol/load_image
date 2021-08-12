@@ -1,8 +1,5 @@
 # How to load images for Segmentation and Classification?
 
-![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) For biological
-
-
 #### Install Required Libraries 
 pip install --upgrade pip\
 pip install os\
