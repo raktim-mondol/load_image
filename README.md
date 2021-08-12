@@ -1,5 +1,5 @@
 # How to load images for Segmentation and Classification?
-```diff
+```diff```
 - text in red
 
 
