@@ -1,13 +1,6 @@
 # How to load images for Segmentation and Classification?
-// resets
-s { text-decoration:none; } //strike-through
-em { font-style: normal; font-weight: bold; } //italic emphasis
 
-
-// colors
-s { color: green }
-em { color: blue }
-
+<font color='red'>test blue color font</font>
 #### Install Required Libraries 
 pip install --upgrade pip\
 pip install os\
