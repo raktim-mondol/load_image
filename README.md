@@ -1,6 +1,6 @@
 # How to load images for Segmentation and Classification?
 
-<span style="color:red">some *This is Blue italic.* text</span> 
+<p>Some Markdown text with <span style="color:blue">some <em>blue</em> text</span>.</p>
 
 
 #### Install Required Libraries 
