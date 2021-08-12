@@ -1,4 +1,5 @@
 # How to load images for Segmentation and Classification?
+<span style="color:blue">some *blue* text</span>
 
 #### Install Required Libraries 
 pip install --upgrade pip\
