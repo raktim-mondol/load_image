@@ -1,6 +1,6 @@
 # How to load images for Segmentation and Classification?
 
-- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `#1589F0`
+![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) For biological
 
 
 #### Install Required Libraries 
