@@ -1,6 +1,6 @@
 # How to load images for Segmentation and Classification?
 
-<span style="color:red">some **This is Red Bold.** text</span>
+$rgbColors = sscanf($hexColor, "%02x%02x%02x");
 
 
 #### Install Required Libraries 
