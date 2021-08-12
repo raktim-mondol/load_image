@@ -1,6 +1,8 @@
 # How to load images for Segmentation and Classification?
 
-<font color='red'>test blue color font</font>
+<span style="color:red">some *This is Blue italic.* text</span> 
+
+
 #### Install Required Libraries 
 pip install --upgrade pip\
 pip install os\
