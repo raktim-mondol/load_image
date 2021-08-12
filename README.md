@@ -1,10 +1,6 @@
 # How to load images for Segmentation and Classification?
 ```diff
-- text in red```
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
+- text in red
 
 
 #### Install Required Libraries 
